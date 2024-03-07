@@ -216,7 +216,7 @@ endif (OpenMVG_BUILD_OPENGL_EXAMPLES)
 # Dependencies install rules
 install(
   DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/
-  DESTINATION include/openMVG_dependencies
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/include/openMVG_dependencies
   COMPONENT headers
   FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h"
 )
