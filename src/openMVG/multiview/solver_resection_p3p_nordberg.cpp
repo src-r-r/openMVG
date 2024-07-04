@@ -104,10 +104,10 @@ static void gauss_newton_refineL(Vec3 &L,
  *
  * The return root is as stable as possible in the sense that it has as high
  * derivative as possible.  The solution is found by simple Newton-Raphson
- * iterations, and the trick is to choose the intial solution r0 in a clever
+ * iterations, and the trick is to choose the initial solution r0 in a clever
  * way.
  *
- * The intial solution is found by considering 5 cases:
+ * The initial solution is found by considering 5 cases:
  *
  * Cases I and II: h has no stationary points. In this case its derivative
  * is positive.  The inital solution to the NR-iteration is r0 here h has
@@ -164,7 +164,7 @@ static double cubick(const double &b, const double &c, const double &d)
   // Do ITER Newton-Raphson iterations
   // Break if position of root changes less than 1e-13
   // double starterr=std::abs(r0*(r0*(r0 + b) + c) + d);
-  
+
   // TODO(RJ:) I have hardcoded the number of iteration here, it's hardcoded in a macro definition in the orginal implementation
   // according to the author, increasing it could lead to a better solution (more robust)
   for (unsigned int cnt = 0; cnt < 50; ++cnt)
