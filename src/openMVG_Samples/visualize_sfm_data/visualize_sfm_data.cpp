@@ -91,7 +91,7 @@ int main(int argc, char* argv[]) {
         rec.log(camera_entity + view_file_name,
             rerun::Image(
                 img.GetMat().data()->data(),
-                { static_cast<uint32_t>(img.rows()), static_cast<uint32_t>(img.cols()) },
+                { static_cast<uint32_t>(img.cols()), static_cast<uint32_t>(img.rows()) },
                 rerun::datatypes::ColorModel::RGB));
       }
     }
